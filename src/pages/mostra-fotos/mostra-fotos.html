@@ -1,0 +1,25 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Mostra Fotos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-row>
+        <ion-img width="200" height="300" src="{{ UrlImgRandom }}"></ion-img>
+    </ion-row>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-2></ion-col>
+      <ion-col col-4>
+        <button ion-button outline (click)="imagemAnterior()">Anterior</button>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button outline (click)="proximaFoto()">Próximo</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

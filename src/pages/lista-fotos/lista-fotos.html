@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Lista Fotos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let foto of listaFotos">
+        {{foto.id}}
+        <ion-card>
+            <div class="card-title">Nome do Arquivo: {{foto.filename}}</div>
+            <div class="card-subtitle">URL: <a href="{{ foto.post_url }}" >{{ foto.post_url }}</a></div>
+            <div class="card-subtitle">Autor: <a href="{{ foto.author_url }}">{{ foto.author }}</a></div>
+            <div class="card-subtitle">Tamanho: {{ foto.height}} x {{ foto.width}} </div>
+        </ion-card>
+    </ion-item>
+  </ion-list>
+</ion-content>
